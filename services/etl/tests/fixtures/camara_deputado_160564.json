@@ -1,0 +1,33 @@
+{
+  "dados": {
+    "id": 160564,
+    "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/160564",
+    "nomeCivil": "EXEMPLO DA SILVA",
+    "ultimoStatus": {
+      "id": 160564,
+      "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/160564",
+      "nome": "Lula da Silva",
+      "siglaPartido": "PT",
+      "uriPartido": null,
+      "siglaUf": "SP",
+      "idLegislatura": 57,
+      "urlFoto": "https://www.camara.leg.br/internet/deputado/bandep/160564.jpg",
+      "email": null,
+      "data": "2023-02-01",
+      "nomeEleitoral": "Lula da Silva",
+      "gabinete": null,
+      "situacao": "Exercício",
+      "condicaoEleitoral": "Titular"
+    },
+    "cpf": "00000000000",
+    "sexo": "F",
+    "urlWebsite": "https://exemplo.com.br",
+    "redeSocial": [],
+    "dataNascimento": "1970-01-01",
+    "dataFalecimento": null,
+    "ufNascimento": "SP",
+    "municipioNascimento": "São Paulo",
+    "escolaridade": "Pós-graduação"
+  },
+  "links": []
+}

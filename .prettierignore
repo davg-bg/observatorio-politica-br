@@ -1,0 +1,9 @@
+node_modules/
+.next/
+dist/
+build/
+pnpm-lock.yaml
+.venv/
+__pycache__/
+services/etl/
+db/migrations/*.sql

@@ -1,0 +1,49 @@
+{
+  "dados": [
+    {
+      "tipoVoto": "Sim",
+      "dataRegistroVoto": "2026-10-14T20:52:43",
+      "deputado_": {
+        "id": 220588,
+        "nome": "Roberto Duarte",
+        "siglaPartido": "REPUBLICANOS",
+        "siglaUf": "AC",
+        "idLegislatura": 57
+      }
+    },
+    {
+      "tipoVoto": "Sim",
+      "dataRegistroVoto": "2026-10-14T20:52:35",
+      "deputado_": {
+        "id": 160527,
+        "nome": "Aguinaldo Ribeiro",
+        "siglaPartido": "PP",
+        "siglaUf": "PB",
+        "idLegislatura": 57
+      }
+    },
+    {
+      "tipoVoto": "Não",
+      "dataRegistroVoto": "2026-10-14T20:52:12",
+      "deputado_": {
+        "id": 204379,
+        "nome": "Acácio Favacho",
+        "siglaPartido": "MDB",
+        "siglaUf": "AP",
+        "idLegislatura": 57
+      }
+    },
+    {
+      "tipoVoto": "Abstenção ",
+      "dataRegistroVoto": "2026-10-14T20:51:55",
+      "deputado_": {
+        "id": 999999,
+        "nome": "Deputado Desconhecido",
+        "siglaPartido": "NOVO",
+        "siglaUf": "SP",
+        "idLegislatura": 57
+      }
+    }
+  ],
+  "links": []
+}

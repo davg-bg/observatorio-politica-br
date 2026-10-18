@@ -1,0 +1,35 @@
+{
+  "dados": [
+    {
+      "orientacaoVoto": "",
+      "codTipoLideranca": "B",
+      "siglaPartidoBloco": "Maioria",
+      "codPartidoBloco": null
+    },
+    {
+      "orientacaoVoto": "Não",
+      "codTipoLideranca": "B",
+      "siglaPartidoBloco": "Governo",
+      "codPartidoBloco": null
+    },
+    {
+      "orientacaoVoto": "Sim",
+      "codTipoLideranca": "P",
+      "siglaPartidoBloco": "PL",
+      "codPartidoBloco": 37906
+    },
+    {
+      "orientacaoVoto": "Não",
+      "codTipoLideranca": "P",
+      "siglaPartidoBloco": "PT",
+      "codPartidoBloco": 36844
+    },
+    {
+      "orientacaoVoto": "",
+      "codTipoLideranca": "P",
+      "siglaPartidoBloco": "PDT",
+      "codPartidoBloco": 36786
+    }
+  ],
+  "links": []
+}

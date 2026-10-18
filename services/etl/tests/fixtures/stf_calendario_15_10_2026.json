@@ -1,0 +1,67 @@
+{
+  "data": "15/10/2026",
+  "tipo": "PRESENCIAL",
+  "colegiados": [
+    {
+      "codigo": "TP",
+      "descricao": "Plenário",
+      "sessoes": [
+        {
+          "id": "87059",
+          "dataInicio": "15/10/2026 14:00",
+          "tipo": "E",
+          "numero": "31",
+          "ano": "2026",
+          "observacao": null,
+          "incidentes": [
+            {
+              "cadeia": null,
+              "classe": "ADI",
+              "numero": "4395",
+              "relator": "MIN. GILMAR MENDES",
+              "ministroVista": null,
+              "destaque": null,
+              "materiaRelevante": "N",
+              "repercussaoGeral": null,
+              "assuncaoCompetencia": null,
+              "situacaoProcessoSessao": "N",
+              "idInformacaoPautaProcesso": "79023",
+              "resumoTema": "1. Ação Direta de Inconstitucionalidade em face do artigo 1º da Lei 8.540/92."
+            },
+            {
+              "cadeia": null,
+              "classe": "RE",
+              "numero": "590880",
+              "relator": "MIN. ELLEN GRACIE",
+              "ministroVista": null,
+              "destaque": "MIN. GILMAR MENDES",
+              "materiaRelevante": "S",
+              "repercussaoGeral": "S",
+              "assuncaoCompetencia": null,
+              "situacaoProcessoSessao": "N",
+              "idInformacaoPautaProcesso": "12352",
+              "resumoTema": "Recurso extraordinário interposto contra acórdão do TST."
+            }
+          ],
+          "listas": []
+        }
+      ]
+    },
+    {
+      "codigo": "1T",
+      "descricao": "Primeira Turma",
+      "sessoes": [
+        {
+          "id": "87060",
+          "dataInicio": "15/10/2026 09:30",
+          "tipo": "O",
+          "numero": "25",
+          "ano": "2026",
+          "observacao": "Pauta reduzida",
+          "incidentes": [],
+          "listas": []
+        }
+      ]
+    }
+  ]
+}

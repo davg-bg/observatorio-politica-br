@@ -1,0 +1,26 @@
+{
+  "ListaParlamentarEmExercicio": {
+    "Metadados": {
+      "Versao": "15/10/2026"
+    },
+    "Parlamentares": {
+      "Parlamentar": {
+        "IdentificacaoParlamentar": {
+          "CodigoParlamentar": "99999",
+          "NomeParlamentar": "Senador Único",
+          "SexoParlamentar": "Feminino",
+          "SiglaPartidoParlamentar": "PT",
+          "UfParlamentar": "RJ"
+        },
+        "Mandato": {
+          "PrimeiraLegislaturaDoMandato": {
+            "NumeroLegislatura": "57",
+            "DataInicio": "2023-02-01",
+            "DataFim": "2027-01-31"
+          },
+          "DescricaoParticipacao": "Titular"
+        }
+      }
+    }
+  }
+}

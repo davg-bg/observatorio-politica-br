@@ -1,0 +1,104 @@
+name: ETL Weekly
+
+# Roda os ETLs semanais: emendas (Portal da Transparência), composição do
+# executivo e envio do digest de alertas aos usuários com favoritos.
+#
+# Secrets necessários no repositório (Settings → Secrets → Actions):
+#   DATABASE_URL                 Postgres connection string (service_role p/ acessar auth.users)
+#   TRANSPARENCIA_API_TOKEN      Token do Portal da Transparência (emendas)
+#   RESEND_API_KEY               (opcional) Token da Resend p/ enviar emails
+#   ALERT_FROM_EMAIL             (opcional) Remetente p/ os digests, ex: observatorio@seudominio.com
+#
+# Se RESEND_API_KEY não estiver definida, o digest roda em modo dry-run (só loga).
+
+on:
+  schedule:
+    # Segunda-feira 10:00 UTC = 07:00 BRT. Dá tempo do ETL diário rodar antes.
+    - cron: '0 10 * * 1'
+
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'Job ou grupo (ex: weekly, alertas-digest, transparencia-emendas)'
+        required: true
+        default: 'weekly'
+        type: choice
+        options:
+          - weekly
+          - transparencia-emendas
+          - executivo-ministros
+          - stf-composicao
+          - stf-julgamentos
+          - alertas-digest
+      dry_run:
+        description: 'Dry-run (não grava no banco e não envia emails)'
+        required: false
+        default: false
+        type: boolean
+
+concurrency:
+  group: etl-weekly
+  cancel-in-progress: false
+
+jobs:
+  etl:
+    name: Executar ETL semanal
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: services/etl
+
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      TRANSPARENCIA_API_TOKEN: ${{ secrets.TRANSPARENCIA_API_TOKEN }}
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      ALERT_FROM_EMAIL: ${{ secrets.ALERT_FROM_EMAIL }}
+      PYTHONUNBUFFERED: '1'
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --all-extras
+
+      - name: Validate DATABASE_URL is set
+        run: |
+          if [ -z "$DATABASE_URL" ]; then
+            echo "::error::DATABASE_URL não configurada nos secrets do repositório"
+            exit 1
+          fi
+          echo "DATABASE_URL configurada (${DATABASE_URL:0:30}…)"
+
+      - name: Report Resend status
+        run: |
+          if [ -z "$RESEND_API_KEY" ]; then
+            echo "::warning::RESEND_API_KEY não configurada — digest rodará em modo dry-run"
+          else
+            echo "RESEND_API_KEY configurada — digests serão enviados"
+          fi
+
+      - name: Run ETL (${{ inputs.target || 'weekly' }})
+        run: |
+          TARGET="${{ inputs.target || 'weekly' }}"
+          FLAGS=""
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            FLAGS="$FLAGS --dry-run"
+          fi
+          echo "Executando: etl run $TARGET $FLAGS"
+          uv run etl run $TARGET $FLAGS
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "### ETL Weekly — ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- Target: \`${{ inputs.target || 'weekly' }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- Dry-run: \`${{ inputs.dry_run || 'false' }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- Status: ${{ job.status }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Trigger: \`${{ github.event_name }}\`" >> $GITHUB_STEP_SUMMARY

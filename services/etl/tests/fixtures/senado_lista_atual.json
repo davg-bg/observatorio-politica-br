@@ -1,0 +1,79 @@
+{
+  "ListaParlamentarEmExercicio": {
+    "Metadados": {
+      "Versao": "15/10/2026 09:48:30",
+      "VersaoServico": "4"
+    },
+    "Parlamentares": {
+      "Parlamentar": [
+        {
+          "IdentificacaoParlamentar": {
+            "CodigoParlamentar": "5672",
+            "CodigoPublicoNaLegAtual": "800",
+            "NomeParlamentar": "Alan Rick",
+            "NomeCompletoParlamentar": "Alan Rick Miranda",
+            "SexoParlamentar": "Masculino",
+            "FormaTratamento": "Senador ",
+            "UrlFotoParlamentar": "http://www.senado.leg.br/senadores/img/fotos-oficiais/senador5672.jpg",
+            "UrlPaginaParlamentar": "http://www25.senado.leg.br/web/senadores/senador/-/perfil/5672",
+            "EmailParlamentar": "sen.alanrick@senado.leg.br",
+            "SiglaPartidoParlamentar": "REPUBLICANOS",
+            "UfParlamentar": "AC",
+            "Bloco": {
+              "CodigoBloco": "346",
+              "NomeBloco": "Bloco Parlamentar Aliança",
+              "NomeApelido": "BLALIANÇA",
+              "DataCriacao": "2023-03-20"
+            },
+            "MembroMesa": "Não",
+            "MembroLideranca": "Sim"
+          },
+          "Mandato": {
+            "CodigoMandato": "596",
+            "UfParlamentar": "AC",
+            "PrimeiraLegislaturaDoMandato": {
+              "NumeroLegislatura": "57",
+              "DataInicio": "2023-02-01",
+              "DataFim": "2027-01-31"
+            },
+            "SegundaLegislaturaDoMandato": {
+              "NumeroLegislatura": "58",
+              "DataInicio": "2027-02-01",
+              "DataFim": "2031-01-31"
+            },
+            "DescricaoParticipacao": "Titular"
+          }
+        },
+        {
+          "IdentificacaoParlamentar": {
+            "CodigoParlamentar": "5982",
+            "CodigoPublicoNaLegAtual": "829",
+            "NomeParlamentar": "Alessandro Vieira",
+            "NomeCompletoParlamentar": "Alessandro Vieira",
+            "SexoParlamentar": "Masculino",
+            "UrlFotoParlamentar": "http://www.senado.leg.br/senadores/img/fotos-oficiais/senador5982.jpg",
+            "UrlPaginaParlamentar": "http://www25.senado.leg.br/web/senadores/senador/-/perfil/5982",
+            "EmailParlamentar": "sen.alessandrovieira@senado.leg.br",
+            "SiglaPartidoParlamentar": "MDB",
+            "UfParlamentar": "SE"
+          },
+          "Mandato": {
+            "CodigoMandato": "559",
+            "UfParlamentar": "SE",
+            "PrimeiraLegislaturaDoMandato": {
+              "NumeroLegislatura": "56",
+              "DataInicio": "2019-02-01",
+              "DataFim": "2023-01-31"
+            },
+            "SegundaLegislaturaDoMandato": {
+              "NumeroLegislatura": "57",
+              "DataInicio": "2023-02-01",
+              "DataFim": "2027-01-31"
+            },
+            "DescricaoParticipacao": "Titular"
+          }
+        }
+      ]
+    }
+  }
+}

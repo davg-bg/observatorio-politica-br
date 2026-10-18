@@ -1,0 +1,62 @@
+[project]
+name = "observatorio-etl"
+version = "0.1.0"
+description = "ETL pipeline do Observatório da Política Brasileira"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.27.2",
+    "pydantic>=2.9.2",
+    "pydantic-settings>=2.5.2",
+    "sqlalchemy>=2.0.35",
+    "psycopg[binary]>=3.2.3",
+    "typer>=0.12.5",
+    "python-dotenv>=1.0.1",
+    "xmltodict>=0.14.2",
+    "tenacity>=9.0.0",
+    "structlog>=24.4.0",
+    "beautifulsoup4>=4.12.3",
+    "lxml>=5.3.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.3",
+    "pytest-asyncio>=0.24.0",
+    "pytest-httpx>=0.32.0",
+    "ruff>=0.6.9",
+    "mypy>=1.11.2",
+]
+
+[project.scripts]
+etl = "etl.cli:app"
+
+[tool.uv]
+package = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["etl"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP", "B", "SIM", "RUF"]
+ignore = ["E501"]  # line length handled by formatter
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+python_files = "test_*.py"
+addopts = "-ra --strict-markers"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_return_any = false
+ignore_missing_imports = true

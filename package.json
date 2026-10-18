@@ -1,0 +1,24 @@
+{
+  "name": "observatorio-politica-br",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Observatório imparcial da política brasileira (Legislativo, Executivo, STF)",
+  "scripts": {
+    "dev": "pnpm --filter @observatorio/web dev",
+    "build": "pnpm --filter @observatorio/web build",
+    "start": "pnpm --filter @observatorio/web start",
+    "lint": "pnpm --filter @observatorio/web lint",
+    "typecheck": "pnpm --filter @observatorio/web typecheck",
+    "test:web": "pnpm --filter @observatorio/web test",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8"
+  },
+  "packageManager": "pnpm@9.12.3",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  }
+}

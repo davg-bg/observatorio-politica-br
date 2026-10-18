@@ -1,0 +1,35 @@
+{
+  "dados": [
+    {
+      "id": "2236186-60",
+      "uri": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2236186-60",
+      "data": "2026-10-14",
+      "dataHoraRegistro": "2026-10-14T20:56:14",
+      "siglaOrgao": "PLEN",
+      "uriOrgao": "https://dadosabertos.camara.leg.br/api/v2/orgaos/180",
+      "uriEvento": "https://dadosabertos.camara.leg.br/api/v2/eventos/83057",
+      "proposicaoObjeto": null,
+      "uriProposicaoObjeto": "https://dadosabertos.camara.leg.br/api/v2/proposicoes/2647737",
+      "descricao": "Rejeitada a Subemenda Substitutiva ao Projeto de Lei Complementar nº 281, de 2019.",
+      "aprovacao": 0
+    },
+    {
+      "id": "2236186-52",
+      "uri": "https://dadosabertos.camara.leg.br/api/v2/votacoes/2236186-52",
+      "data": "2026-10-14",
+      "dataHoraRegistro": "2026-10-14T20:00:14",
+      "siglaOrgao": "PLEN",
+      "uriEvento": "https://dadosabertos.camara.leg.br/api/v2/eventos/83057",
+      "proposicaoObjeto": null,
+      "uriProposicaoObjeto": null,
+      "descricao": "Rejeitado o Requerimento.",
+      "aprovacao": 0
+    }
+  ],
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://dadosabertos.camara.leg.br/api/v2/votacoes?dataInicio=2026-09-15&dataFim=2026-10-15&itens=2"
+    }
+  ]
+}

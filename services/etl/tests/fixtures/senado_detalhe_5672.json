@@ -1,0 +1,28 @@
+{
+  "DetalheParlamentar": {
+    "Metadados": {
+      "Versao": "15/10/2026 09:02:00",
+      "VersaoServico": "6"
+    },
+    "Parlamentar": {
+      "IdentificacaoParlamentar": {
+        "CodigoParlamentar": "5672",
+        "CodigoPublicoNaLegAtual": "800",
+        "NomeParlamentar": "Alan Rick",
+        "NomeCompletoParlamentar": "Alan Rick Miranda",
+        "SexoParlamentar": "Masculino",
+        "UrlFotoParlamentar": "http://www.senado.leg.br/senadores/img/fotos-oficiais/senador5672.jpg",
+        "UrlPaginaParlamentar": "http://www25.senado.leg.br/web/senadores/senador/-/perfil/5672",
+        "EmailParlamentar": "sen.alanrick@senado.leg.br",
+        "SiglaPartidoParlamentar": "REPUBLICANOS",
+        "UfParlamentar": "AC"
+      },
+      "DadosBasicosParlamentar": {
+        "DataNascimento": "1976-10-23",
+        "Naturalidade": "Rio Branco",
+        "UfNaturalidade": "AC",
+        "EnderecoParlamentar": "Senado Federal Anexo 2 Ala Teotônio Vilela Gabinete 05"
+      }
+    }
+  }
+}
